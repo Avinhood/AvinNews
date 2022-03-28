@@ -1,6 +1,7 @@
 package com.avin.news
 
 import android.app.Application
+import com.avin.libnetwrok.Network
 import com.avin.news.di.*
 
 class Appcontroller : Application()
@@ -16,6 +17,7 @@ class Appcontroller : Application()
             .appModule(AppModule(this))
             .apiHelper(ApiHelper())
             .dBModule(DBModule(this))
+            .network(Network)
             .build()
 
     }

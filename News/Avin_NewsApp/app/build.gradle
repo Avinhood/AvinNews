@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
@@ -16,6 +16,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
     buildTypes {
         release {
@@ -52,6 +54,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
 
     implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation project(path: ':libNetwrok')
     annotationProcessor 'androidx.annotation:annotation:1.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
     annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.1.0'
@@ -73,8 +76,5 @@ dependencies {
 
     implementation "io.reactivex.rxjava2:rxjava:2.2.19"
     implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
-
-
-
 
 }

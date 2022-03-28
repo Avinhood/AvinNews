@@ -6,8 +6,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.avin.libnetwrok.Network
 import com.avin.news.adapter.NewsListAdapter
 import com.avin.news.databinding.ActivityMainBinding
+import com.avin.news.di.ApiComponent
+import com.avin.news.di.DaggerApiComponent
 import com.avin.news.model.NewsData
 import com.avin.news.viewmodel.NewsViewModel
 
@@ -21,6 +24,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         super.onCreate(savedInstanceState)
         setToolbarText("Top News")
         hideBack()
+
         getNewsApi()
     }
 
