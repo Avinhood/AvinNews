@@ -100,17 +100,16 @@ class NewsRepository {
     fun insertNews(newsList: ArrayList<NewsData>?) {
 
         var needsUpdate = false
-        newsList?.stream()?.map { item ->
-            {
-                val inserted = newsDao.insertNews(item)
-                if (inserted == -1L) {
-                    val updated = newsDao.insertNews(item)
-                    if (updated > 0) {
-                        needsUpdate = true
-                    }
-                } else {
+
+        newsList?.forEach {item ->
+            val inserted = newsDao.insertNews(item)
+            if (inserted == -1L) {
+                val updated = newsDao.insertNews(item)
+                if (updated > 0) {
                     needsUpdate = true
                 }
+            } else {
+                needsUpdate = true
             }
         }
 
