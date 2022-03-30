@@ -19,7 +19,7 @@ import javax.inject.Singleton
 @Module
 object Network {
 
-    private const val BASE_URL = "https://newsapi.org/v2/"
+    const val BASE_URL = "https://newsapi.org/v2/"
 
     @Provides
     @Singleton

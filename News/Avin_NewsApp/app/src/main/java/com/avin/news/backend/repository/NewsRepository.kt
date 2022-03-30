@@ -49,7 +49,7 @@ class NewsRepository {
         }
 
         val postListInfo: Single<BaseModel> =
-            newsApi.getPaymentTypes("US", Constants.NEWS_API_KEY, 50)
+            newsApi.getCountryHeadlines("US", Constants.NEWS_API_KEY, 50)
 
         compositeDisposable.add(postListInfo
             .subscribeOn(Schedulers.io())

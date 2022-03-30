@@ -8,6 +8,6 @@ import retrofit2.http.Query
 interface NewsApi {
 
     @GET("top-headlines")
-    fun getPaymentTypes(@Query("country") country: String, @Query("apiKey") apiKey: String, @Query("pageSize") page: Int): Single<BaseModel>
+    fun getCountryHeadlines(@Query("country") country: String, @Query("apiKey") apiKey: String, @Query("pageSize") page: Int): Single<BaseModel>
 
 }
